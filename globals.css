@@ -1,0 +1,158 @@
+/* Importa os estilos de responsividade */
+@import './responsive.css';
+
+/**
+ * Estilos globais para o AdvoLeads
+ * 
+ * Define os estilos CSS globais para a aplicação, utilizando as variáveis de tema
+ */
+
+:root {
+  /* As variáveis CSS serão definidas dinamicamente pelo ThemeProvider */
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: var(--font-body, 'Inter, system-ui, sans-serif');
+  color: var(--color-gray-800, #1f2937);
+  background-color: var(--color-gray-50, #f9fafb);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading, 'Inter, system-ui, sans-serif');
+  color: var(--color-primary-800, #2e4a33);
+}
+
+a {
+  color: var(--color-primary-600, #4a7a52);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button, 
+.btn {
+  background-color: var(--color-primary-500, #5d9566);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-md, 0.25rem);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover,
+.btn:hover {
+  background-color: var(--color-primary-600, #4a7a52);
+}
+
+button:focus,
+.btn:focus {
+  outline: 2px solid var(--color-primary-300, #9bbfa0);
+  outline-offset: 2px;
+}
+
+button:disabled,
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+input, 
+select, 
+textarea {
+  border: 1px solid var(--color-gray-300, #d1d5db);
+  border-radius: var(--border-radius-md, 0.25rem);
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  transition: border-color 0.2s;
+}
+
+input:focus, 
+select:focus, 
+textarea:focus {
+  outline: none;
+  border-color: var(--color-primary-500, #5d9566);
+  box-shadow: 0 0 0 3px var(--color-primary-100, #dce8de);
+}
+
+.card {
+  background-color: white;
+  border-radius: var(--border-radius-lg, 0.5rem);
+  box-shadow: var(--shadow-md, 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06));
+  padding: 1.5rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Cores de texto */
+.text-primary {
+  color: var(--color-primary-600, #4a7a52);
+}
+
+.text-secondary {
+  color: var(--color-secondary-600, #7a9043);
+}
+
+.text-success {
+  color: var(--color-success, #2e7d32);
+}
+
+.text-warning {
+  color: var(--color-warning, #f9a825);
+}
+
+.text-error {
+  color: var(--color-error, #d32f2f);
+}
+
+.text-info {
+  color: var(--color-info, #0288d1);
+}
+
+/* Cores de fundo */
+.bg-primary {
+  background-color: var(--color-primary-500, #5d9566);
+  color: white;
+}
+
+.bg-primary-light {
+  background-color: var(--color-primary-100, #dce8de);
+  color: var(--color-primary-800, #2e4a33);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary-500, #95b054);
+  color: white;
+}
+
+.bg-secondary-light {
+  background-color: var(--color-secondary-100, #e8efd9);
+  color: var(--color-secondary-800, #495528);
+}
+
+/* Gradientes */
+.bg-gradient-primary {
+  background: linear-gradient(to right, var(--color-primary-600, #4a7a52), var(--color-primary-500, #5d9566));
+  color: white;
+}
+
+.bg-gradient-moss {
+  background: linear-gradient(to bottom, var(--color-primary-50, #f0f5f1), white);
+}

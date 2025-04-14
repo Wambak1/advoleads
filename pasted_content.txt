@@ -1,0 +1,15 @@
+ criar um microsaas voltado a escritórios de advocacia, similar ao RD Station, mas com foco em gestão de leads via WhatsApp. Isso incluirá funcionalidades como captura e registro de leads, funil de follow-up, integração oficial com WhatsApp Business, e uso do Firebase como backend. Também iniciarei o desenvolvimento de um MVP web responsivo.
+
+Já volto com o plano e o código inicial!
+
+Este documento apresenta um plano de desenvolvimento para um microSaaS voltado a escritórios de advocacia, focado na captura, registro, gestão e follow-up de leads (potenciais clientes) com integração à API oficial do WhatsApp Business (Cloud API do Meta). O sistema será acessível via web (aplicação responsiva que também pode ser usada em dispositivos móveis) e terá como objetivo auxiliar advogados e equipes jurídicas a gerenciarem contatos de possíveis clientes, acompanhar o funil de vendas (pipeline) e realizar o acompanhamento ativo desses leads através do WhatsApp.
+
+Serão detalhados os requisitos prioritários, a arquitetura e stack tecnológica recomendada (incluindo o uso do Firebase no backend e React no frontend), bem como as diretrizes para integrar a plataforma com a API do WhatsApp Business. Em seguida, apresentamos um plano passo a passo de desenvolvimento e um MVP (Produto Mínimo Viável) inicial já implementado de forma simplificada, com trechos de código modular e documentado. Esse MVP cobre as funcionalidades básicas de captura e gestão de leads, autenticação de usuários via Firebase, armazenamento de dados no Firestore e uma integração simulada com a API do WhatsApp.
+
+Conforme requisitado, as funcionalidades do sistema devem ser implementadas na seguinte ordem de prioridade:
+
+Captura de Leads – Formas de entrada de novos leads, seja por meio de formulário embutido no site do escritório, link compartilhável para um formulário de cadastro ou importação de contatos em lote (por exemplo, via CSV).
+Registro e Gestão de Contatos – Armazenamento dos dados dos leads (nome, contato, origem etc.) e interface para visualizar, editar e gerenciar esses contatos em um tipo de agenda/CRM simples.
+CRM / Funil de Vendas (Pipeline) – Visualização dos leads em diferentes etapas do funil de conversão (ex.: Novo lead, Em contato, Em negociação, Contratado, etc.), com etapas customizáveis de acordo com o processo do escritório.
+Envio e Agendamento de Mensagens pelo WhatsApp – Integração com a API do WhatsApp Business para permitir envio de mensagens diretamente pela plataforma, incluindo envio instantâneo e agendamento de envio (follow-ups automáticos).
+Histórico de Interações – Registro de todas as interações realizadas com cada lead (mensagens enviadas, recebidas, ligações, emails, etc.), especialmente as mensagens de WhatsApp, criando um histórico consultável do relacionamento com aquele potencial cliente.

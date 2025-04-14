@@ -1,0 +1,135 @@
+/**
+ * Utilitários para responsividade mobile
+ * 
+ * Este arquivo contém media queries e utilitários para garantir
+ * que a aplicação seja responsiva em diferentes tamanhos de tela
+ */
+
+/* Breakpoints para diferentes tamanhos de tela */
+:root {
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+}
+
+/* Classes de utilidade para responsividade */
+.hide-on-mobile {
+  @media (max-width: 767px) {
+    display: none !important;
+  }
+}
+
+.hide-on-desktop {
+  @media (min-width: 768px) {
+    display: none !important;
+  }
+}
+
+.mobile-container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+}
+
+/* Media queries para diferentes tamanhos de tela */
+@media (max-width: 639px) {
+  /* Estilos para telas muito pequenas (smartphones) */
+  html {
+    font-size: 14px;
+  }
+  
+  .card {
+    padding: 1rem;
+  }
+  
+  .grid-cols-2 {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .grid-cols-3 {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .grid-cols-4 {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+  /* Estilos para smartphones maiores */
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Estilos para tablets */
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Ajustes para o layout do dashboard em telas menores */
+@media (max-width: 767px) {
+  /* Ajustes para o sidebar em mobile */
+  aside {
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    bottom: 0;
+    z-index: 50;
+    width: 80% !important;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  aside.open {
+    transform: translateX(0);
+  }
+  
+  /* Overlay para quando o sidebar estiver aberto */
+  .sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 40;
+  }
+  
+  .sidebar-overlay.open {
+    display: block;
+  }
+  
+  /* Ajustes para o conteúdo principal */
+  main {
+    padding: 1rem;
+  }
+  
+  /* Ajustes para os cards de métricas */
+  .metric-card {
+    padding: 0.75rem;
+  }
+  
+  /* Ajustes para tabelas */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  /* Ajustes para formulários */
+  form .grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Ajustes para telas muito grandes */
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
