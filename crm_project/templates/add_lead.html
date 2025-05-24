@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Lead</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Add New Lead</h1>
+    <form action="{{ url_for('add_lead_action_route') }}" method="post">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <br>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"> <!-- Removed 'required' as per model update -->
+        </div>
+        <br>
+        <div>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone">
+        </div>
+        <br>
+        <div>
+            <label for="status">Status:</label>
+            <input type="text" id="status" name="status" required> <!-- Assuming status is required -->
+        </div>
+        <br>
+        <button type="submit">Add Lead</button>
+    </form>
+    <br>
+    <a href="{{ url_for('list_leads_route') }}" class="button-link">View Leads</a>
+</body>
+</html>
